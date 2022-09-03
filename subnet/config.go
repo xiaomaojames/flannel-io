@@ -181,6 +181,7 @@ func ParseConfig(s string) (*Config, error) {
 		return nil, err
 	}
 	cfg.BackendType = bt
+	cfg.SubnetLen = 20
 
 	return cfg, nil
 }
