@@ -194,6 +194,7 @@ func newKubeSubnetManager(ctx context.Context, c clientset.Interface, sc *subnet
 	)
 	ksm.nodeController = controller
 	ksm.nodeStore = listers.NewNodeLister(indexer)
+	ksm.subnetConf.SubnetLen = 22
 	return &ksm, nil
 }
 
