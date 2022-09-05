@@ -24,9 +24,9 @@ GOARM=7
 
 # These variables can be overridden by setting an environment variable.
 TEST_PACKAGES?=pkg/ip subnet subnet/etcd subnet/kube network backend
-TEST_PACKAGES_EXPANDED=$(TEST_PACKAGES:%=github.com/flannel-io/flannel/%)
+TEST_PACKAGES_EXPANDED=$(TEST_PACKAGES:%=github.com/xiaomaojames/flannel-io/%)
 PACKAGES?=$(TEST_PACKAGES) network
-PACKAGES_EXPANDED=$(PACKAGES:%=github.com/flannel-io/flannel/%)
+PACKAGES_EXPANDED=$(PACKAGES:%=github.com/xiaomaojames/flannel-io/%)
 
 ### BUILDING
 clean:
@@ -38,11 +38,11 @@ clean:
 
 dist/flanneld: $(shell find . -type f  -name '*.go')
 	CGO_ENABLED=$(CGO_ENABLED) go build -o dist/flanneld \
-	  -ldflags '-s -w -X github.com/flannel-io/flannel/version.Version=$(TAG) -extldflags "-static"'
+	  -ldflags '-s -w -X github.com/xiaomaojames/flannel-io/version.Version=$(TAG) -extldflags "-static"'
 
 dist/flanneld.exe: $(shell find . -type f  -name '*.go')
 	CXX=x86_64-w64-mingw32-g++ CC=x86_64-w64-mingw32-gcc CGO_ENABLED=1 GOOS=windows go build -o dist/flanneld.exe \
-	  -ldflags '-s -w -X github.com/flannel-io/flannel/version.Version=$(TAG) -extldflags "-static"'
+	  -ldflags '-s -w -X github.com/xiaomaojames/flannel-io/version.Version=$(TAG) -extldflags "-static"'
 
 # This will build flannel natively using golang image
 dist/flanneld-$(ARCH): dist/qemu-$(ARCH)-static
@@ -50,10 +50,10 @@ dist/flanneld-$(ARCH): dist/qemu-$(ARCH)-static
 	docker run --rm -e CGO_ENABLED=$(CGO_ENABLED) -e GOARCH=$(ARCH) -e GOCACHE=/go \
 		-u $(shell id -u):$(shell id -g) \
 		-v $(CURDIR)/dist/qemu-$(ARCH)-static:/usr/bin/qemu-$(ARCH)-static \
-		-v $(CURDIR):/go/src/github.com/flannel-io/flannel:ro \
-		-v $(CURDIR)/dist:/go/src/github.com/flannel-io/flannel/dist \
+		-v $(CURDIR):/go/src/github.com/xiaomaojames/flannel-io:ro \
+		-v $(CURDIR)/dist:/go/src/github.com/xiaomaojames/flannel-io/dist \
 		golang:$(GO_VERSION) /bin/bash -c '\
-		cd /go/src/github.com/flannel-io/flannel && \
+		cd /go/src/github.com/xiaomaojames/flannel-io && \
 		make -e dist/flanneld && \
 		mv dist/flanneld dist/flanneld-$(ARCH)'
 
@@ -75,9 +75,9 @@ test: header-check gofmt verify-modules
 	# SYS_ADMIN capacity is required to create network namespace
 	docker run --cap-add=NET_ADMIN \
 		--cap-add=SYS_ADMIN --rm \
-		-v $(shell pwd):/go/src/github.com/flannel-io/flannel \
+		-v $(shell pwd):/go/src/github.com/xiaomaojames/flannel-io \
 		golang:$(GO_VERSION) \
-		/bin/bash -c 'cd /go/src/github.com/flannel-io/flannel && go test -v -cover $(TEST_PACKAGES_EXPANDED)'
+		/bin/bash -c 'cd /go/src/github.com/xiaomaojames/flannel-io && go test -v -cover $(TEST_PACKAGES_EXPANDED)'
 
 	# Test the docker-opts script
 	cd dist; ./mk-docker-opts_tests.sh
@@ -103,29 +103,29 @@ header-check:
 gofmt:
 	docker run --rm -e CGO_ENABLED=$(CGO_ENABLED) -e GOARCH=$(ARCH) \
 		-u $(shell id -u):$(shell id -g) \
-		-v $(CURDIR):/go/src/github.com/flannel-io/flannel \
-		-v $(CURDIR)/dist:/go/src/github.com/flannel-io/flannel/dist \
+		-v $(CURDIR):/go/src/github.com/xiaomaojames/flannel-io \
+		-v $(CURDIR)/dist:/go/src/github.com/xiaomaojames/flannel-io/dist \
 		golang:$(GO_VERSION) /bin/bash -c '\
-		cd /go/src/github.com/flannel-io/flannel && \
+		cd /go/src/github.com/xiaomaojames/flannel-io && \
 		! gofmt -d $(PACKAGES) 2>&1 | read'
 
 verify-modules:
 	docker run --rm -e CGO_ENABLED=$(CGO_ENABLED) -e GOARCH=$(ARCH) \
                 -u $(shell id -u):$(shell id -g) \
-                -v $(CURDIR):/go/src/github.com/flannel-io/flannel \
-                -v $(CURDIR)/dist:/go/src/github.com/flannel-io/flannel/dist \
+                -v $(CURDIR):/go/src/github.com/xiaomaojames/flannel-io \
+                -v $(CURDIR)/dist:/go/src/github.com/xiaomaojames/flannel-io/dist \
                 golang:$(GO_VERSION) /bin/bash -c '\
-                cd /go/src/github.com/flannel-io/flannel && \
+                cd /go/src/github.com/xiaomaojames/flannel-io && \
 		!go mod tidy 2>&1|read && \
 		!go vet 2>&1|read'
 
 gofmt-fix:
 	docker run --rm -e CGO_ENABLED=$(CGO_ENABLED) -e GOARCH=$(ARCH) \
 		-u $(shell id -u):$(shell id -g) \
-		-v $(CURDIR):/go/src/github.com/flannel-io/flannel \
-		-v $(CURDIR)/dist:/go/src/github.com/flannel-io/flannel/dist \
+		-v $(CURDIR):/go/src/github.com/xiaomaojames/flannel-io \
+		-v $(CURDIR)/dist:/go/src/github.com/xiaomaojames/flannel-io/dist \
 		golang:$(GO_VERSION) /bin/bash -c '\
-		cd /go/src/github.com/flannel-io/flannel && \
+		cd /go/src/github.com/xiaomaojames/flannel-io && \
 		gofmt -w $(PACKAGES)'
 
 bash_unit:
@@ -140,10 +140,10 @@ endif
 	# valid values for ARCH are [amd64 arm arm64 ppc64le s390x mips64le]
 	docker run --rm -e GOARM=$(GOARM) -e CGO_ENABLED=$(CGO_ENABLED) -e GOCACHE=/go \
 		-u $(shell id -u):$(shell id -g) \
-		-v $(CURDIR):/go/src/github.com/flannel-io/flannel:ro \
-		-v $(CURDIR)/dist:/go/src/github.com/flannel-io/flannel/dist \
+		-v $(CURDIR):/go/src/github.com/xiaomaojames/flannel-io:ro \
+		-v $(CURDIR)/dist:/go/src/github.com/xiaomaojames/flannel-io/dist \
 		golang:$(GO_VERSION) /bin/bash -c '\
-		cd /go/src/github.com/flannel-io/flannel && \
+		cd /go/src/github.com/xiaomaojames/flannel-io && \
 		make -e dist/flanneld && \
 		mv dist/flanneld dist/flanneld-$(ARCH)'
 	docker build -f Dockerfile.$(ARCH) -t $(REGISTRY):$(TAG)-$(ARCH) .
@@ -247,7 +247,7 @@ flannel-git:
 install:
 	# This is intended as just a developer convenience to help speed up non-containerized builds
 	# It is NOT how you install flannel
-	CGO_ENABLED=$(CGO_ENABLED) go install -v github.com/flannel-io/flannel
+	CGO_ENABLED=$(CGO_ENABLED) go install -v github.com/xiaomaojames/flannel-io
 
 minikube-start:
 	minikube start --network-plugin cni

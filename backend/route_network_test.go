@@ -20,9 +20,9 @@ import (
 	"net"
 	"testing"
 
-	"github.com/flannel-io/flannel/pkg/ip"
-	"github.com/flannel-io/flannel/pkg/ns"
-	"github.com/flannel-io/flannel/subnet"
+	"github.com/xiaomaojames/flannel-io/pkg/ip"
+	"github.com/xiaomaojames/flannel-io/pkg/ns"
+	"github.com/xiaomaojames/flannel-io/subnet"
 	"github.com/vishvananda/netlink"
 )
 

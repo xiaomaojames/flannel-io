@@ -24,8 +24,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/flannel-io/flannel/pkg/ip"
-	. "github.com/flannel-io/flannel/subnet"
+	"github.com/xiaomaojames/flannel-io/pkg/ip"
+	. "github.com/xiaomaojames/flannel-io/subnet"
 	"go.etcd.io/etcd/api/v3/mvccpb"
 	"go.etcd.io/etcd/api/v3/v3rpc/rpctypes"
 	"go.etcd.io/etcd/client/pkg/v3/tlsutil"

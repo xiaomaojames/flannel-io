@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/flannel-io/flannel/pkg/powershell"
+	"github.com/xiaomaojames/flannel-io/pkg/powershell"
 )
 
 // Router manages network routes on Windows OS using MSFT_NetRoute

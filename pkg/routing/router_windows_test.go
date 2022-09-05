@@ -21,7 +21,7 @@ import (
 	"net"
 	"testing"
 
-	"github.com/flannel-io/flannel/pkg/ip"
+	"github.com/xiaomaojames/flannel-io/pkg/ip"
 )
 
 func TestGetAllRoutes(t *testing.T) {

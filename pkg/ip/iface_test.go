@@ -21,7 +21,7 @@ import (
 	"net"
 	"testing"
 
-	"github.com/flannel-io/flannel/pkg/ns"
+	"github.com/xiaomaojames/flannel-io/pkg/ns"
 	"github.com/vishvananda/netlink"
 )
 
