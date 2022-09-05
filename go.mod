@@ -40,7 +40,10 @@ require (
 
 )
 
-require go.etcd.io/etcd/client/v3 v3.5.4
+require (
+	github.com/flannel-io/flannel v0.19.2
+	go.etcd.io/etcd/client/v3 v3.5.4
+)
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
