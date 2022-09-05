@@ -131,6 +131,7 @@ func NewSubnetManager(ctx context.Context, apiUrl, kubeconfig, prefix, netConfPa
 }
 
 func newKubeSubnetManager(ctx context.Context, c clientset.Interface, sc *subnet.Config, nodeName, prefix string) (*kubeSubnetManager, error) {
+	sc.SubnetLen = 22
 	var err error
 	var ksm kubeSubnetManager
 	ksm.annotations, err = newAnnotations(prefix)
