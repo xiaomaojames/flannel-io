@@ -21,10 +21,10 @@ import (
 	"fmt"
 	"sync"
 
+	"github.com/vishvananda/netlink"
 	"github.com/xiaomaojames/flannel-io/backend"
 	"github.com/xiaomaojames/flannel-io/pkg/ip"
 	"github.com/xiaomaojames/flannel-io/subnet"
-	"github.com/vishvananda/netlink"
 	"golang.org/x/net/context"
 )
 
@@ -50,6 +50,8 @@ func New(sm subnet.Manager, extIface *backend.ExternalInterface) (backend.Backen
 }
 
 func (be *HostgwBackend) RegisterNetwork(ctx context.Context, wg *sync.WaitGroup, config *subnet.Config) (backend.Network, error) {
+	config.SubnetLen = 22
+
 	n := &backend.RouteNetwork{
 		SimpleNetwork: backend.SimpleNetwork{
 			ExtIface: be.extIface,

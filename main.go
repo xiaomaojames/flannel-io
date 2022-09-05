@@ -192,7 +192,7 @@ func newSubnetManager(ctx context.Context) (subnet.Manager, error) {
 	return etcd.NewLocalManager(ctx, cfg, prevSubnet, prevIPv6Subnet)
 }
 
-func main() {
+func main1() {
 	if opts.version {
 		fmt.Fprintln(os.Stderr, version.Version)
 		os.Exit(0)
@@ -220,6 +220,7 @@ func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 
 	sm, err := newSubnetManager(ctx)
+
 	if err != nil {
 		log.Error("Failed to create SubnetManager: ", err)
 		os.Exit(1)
