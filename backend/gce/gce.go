@@ -46,7 +46,7 @@ import (
 
 	"github.com/flannel-io/flannel/backend"
 	"github.com/flannel-io/flannel/pkg/ip"
-	"github.com/flannel-io/flannel/subnet"
+	"github.com/xiaomaojames/flannel-io/subnet"
 	"golang.org/x/net/context"
 	"google.golang.org/api/googleapi"
 	log "k8s.io/klog"
@@ -126,7 +126,7 @@ func (g *GCEBackend) RegisterNetwork(ctx context.Context, wg *sync.WaitGroup, co
 	}, nil
 }
 
-//returns true if an exact matching rule is found
+// returns true if an exact matching rule is found
 func (g *GCEBackend) handleMatchingRoute(subnet string) (bool, error) {
 	matchingRoute, err := g.api.getRoute(subnet)
 	if err != nil {

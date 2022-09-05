@@ -21,7 +21,7 @@ import (
 
 	"github.com/flannel-io/flannel/backend"
 	"github.com/flannel-io/flannel/pkg/ip"
-	"github.com/flannel-io/flannel/subnet"
+	"github.com/xiaomaojames/flannel-io/subnet"
 )
 
 func newNetwork(sm subnet.Manager, extIface *backend.ExternalInterface, port int, nw ip.IP4Net, l *subnet.Lease) (*backend.SimpleNetwork, error) {

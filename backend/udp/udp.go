@@ -20,7 +20,7 @@ import (
 	"fmt"
 
 	"github.com/flannel-io/flannel/backend"
-	"github.com/flannel-io/flannel/subnet"
+	"github.com/xiaomaojames/flannel-io/subnet"
 )
 
 func init() {

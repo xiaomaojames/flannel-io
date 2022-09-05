@@ -16,7 +16,7 @@ package etcd
 
 import (
 	"github.com/flannel-io/flannel/pkg/ip"
-	"github.com/flannel-io/flannel/subnet"
+	"github.com/xiaomaojames/flannel-io/subnet"
 )
 
 func NewMockManager(registry *MockSubnetRegistry) subnet.Manager {

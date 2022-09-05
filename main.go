@@ -33,10 +33,10 @@ import (
 	"github.com/flannel-io/flannel/network"
 	"github.com/flannel-io/flannel/pkg/ip"
 	"github.com/flannel-io/flannel/pkg/ipmatch"
-	"github.com/flannel-io/flannel/subnet"
 	etcd "github.com/flannel-io/flannel/subnet/etcd"
 	"github.com/flannel-io/flannel/subnet/kube"
 	"github.com/flannel-io/flannel/version"
+	"github.com/xiaomaojames/flannel-io/subnet"
 	"golang.org/x/net/context"
 	log "k8s.io/klog"
 

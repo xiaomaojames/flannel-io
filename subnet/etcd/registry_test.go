@@ -22,7 +22,7 @@ import (
 	"time"
 
 	"github.com/flannel-io/flannel/pkg/ip"
-	. "github.com/flannel-io/flannel/subnet"
+	. "github.com/xiaomaojames/flannel-io/subnet"
 	etcd "go.etcd.io/etcd/client/v3"
 	"go.etcd.io/etcd/tests/v3/integration"
 	"golang.org/x/net/context"

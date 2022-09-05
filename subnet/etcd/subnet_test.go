@@ -21,8 +21,8 @@ import (
 	"time"
 
 	"github.com/flannel-io/flannel/pkg/ip"
-	. "github.com/flannel-io/flannel/subnet"
 	"github.com/jonboulle/clockwork"
+	. "github.com/xiaomaojames/flannel-io/subnet"
 	"golang.org/x/net/context"
 )
 

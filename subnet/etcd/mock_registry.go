@@ -20,8 +20,8 @@ import (
 	"time"
 
 	"github.com/flannel-io/flannel/pkg/ip"
-	. "github.com/flannel-io/flannel/subnet"
 	"github.com/jonboulle/clockwork"
+	. "github.com/xiaomaojames/flannel-io/subnet"
 	"go.etcd.io/etcd/api/v3/v3rpc/rpctypes"
 	"golang.org/x/net/context"
 )

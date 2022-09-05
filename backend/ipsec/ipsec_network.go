@@ -23,8 +23,8 @@ import (
 	"sync"
 
 	"github.com/flannel-io/flannel/backend"
-	"github.com/flannel-io/flannel/subnet"
 	"github.com/vishvananda/netlink"
+	"github.com/xiaomaojames/flannel-io/subnet"
 	"golang.org/x/net/context"
 	log "k8s.io/klog"
 )

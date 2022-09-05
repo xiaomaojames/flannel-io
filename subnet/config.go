@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/flannel-io/flannel/pkg/ip"
+	"github.com/xiaomaojames/flannel-io/pkg/ip"
 )
 
 type Config struct {

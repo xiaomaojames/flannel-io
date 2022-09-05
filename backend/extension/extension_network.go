@@ -23,7 +23,7 @@ import (
 	"fmt"
 
 	"github.com/flannel-io/flannel/backend"
-	"github.com/flannel-io/flannel/subnet"
+	"github.com/xiaomaojames/flannel-io/subnet"
 	log "k8s.io/klog"
 )
 
