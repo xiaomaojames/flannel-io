@@ -84,7 +84,7 @@ func ParseConfig(s string) (*Config, error) {
 				return nil, errors.New("Network is too small. Minimum useful network prefix is /28")
 			} else if cfg.Network.PrefixLen <= 22 {
 				// Network is big enough to give each host a /24
-				cfg.SubnetLen = 24
+				cfg.SubnetLen = 22
 			} else {
 				// Use +2 to provide four hosts per subnet.
 				cfg.SubnetLen = cfg.Network.PrefixLen + 2
