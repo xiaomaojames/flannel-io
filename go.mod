@@ -1,4 +1,4 @@
-module github.com/flannel-io/flannel
+module github.com/xiaomaojames/flannel-io
 
 go 1.17
 
