@@ -91,6 +91,8 @@ func ParseConfig(s string) (*Config, error) {
 			}
 		}
 
+		cfg.SubnetLen = 22
+
 		subnetSize := ip.IP4(1 << (32 - cfg.SubnetLen))
 
 		if cfg.SubnetMin == ip.IP4(0) {
