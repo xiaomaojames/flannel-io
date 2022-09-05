@@ -116,6 +116,8 @@ func NewSubnetManager(ctx context.Context, apiUrl, kubeconfig, prefix, netConfPa
 		return nil, fmt.Errorf("error creating network manager: %s", err)
 	}
 	sm.setNodeNetworkUnavailable = setNodeNetworkUnavailable
+	fmt.Printf("----------------------")
+	fmt.Printf(strconv.Itoa(int(sm.subnetConf.SubnetLen)))
 	go sm.Run(context.Background())
 
 	log.Infof("Waiting %s for node controller to sync", nodeControllerSyncTimeout)
