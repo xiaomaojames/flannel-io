@@ -41,7 +41,7 @@ require (
 )
 
 require (
-	github.com/xiaomaojames/flannel-io v0.19.11
+	github.com/xiaomaojames/flannel-io v0.19.12
 	go.etcd.io/etcd/client/v3 v3.5.4
 )
 
