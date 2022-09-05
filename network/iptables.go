@@ -21,7 +21,7 @@ import (
 	"time"
 
 	"github.com/coreos/go-iptables/iptables"
-	"github.com/flannel-io/flannel/pkg/ip"
+	"github.com/xiaomaojames/flannel-io/pkg/ip"
 	"github.com/xiaomaojames/flannel-io/subnet"
 	log "k8s.io/klog"
 )

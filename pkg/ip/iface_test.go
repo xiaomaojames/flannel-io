@@ -21,8 +21,8 @@ import (
 	"net"
 	"testing"
 
-	"github.com/flannel-io/flannel/pkg/ns"
 	"github.com/vishvananda/netlink"
+	"github.com/xiaomaojames/flannel-io/pkg/ns"
 )
 
 func TestEnsureV4AddressOnLink(t *testing.T) {

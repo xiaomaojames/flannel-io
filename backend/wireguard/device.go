@@ -26,7 +26,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/flannel-io/flannel/pkg/ip"
+	"github.com/xiaomaojames/flannel-io/pkg/ip"
 	"github.com/vishvananda/netlink"
 	"golang.org/x/net/context"
 	"golang.zx2c4.com/wireguard/wgctrl"

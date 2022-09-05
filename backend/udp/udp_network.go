@@ -19,8 +19,8 @@ package udp
 import (
 	"fmt"
 
-	"github.com/flannel-io/flannel/backend"
-	"github.com/flannel-io/flannel/pkg/ip"
+	"github.com/xiaomaojames/flannel-io/backend"
+	"github.com/xiaomaojames/flannel-io/pkg/ip"
 	"github.com/xiaomaojames/flannel-io/subnet"
 )
 

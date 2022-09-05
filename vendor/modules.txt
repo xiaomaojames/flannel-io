@@ -110,32 +110,32 @@ github.com/denverdino/aliyungo/util
 # github.com/dustin/go-humanize v1.0.0
 ## explicit
 github.com/dustin/go-humanize
-# github.com/flannel-io/flannel v0.19.2
+# github.com/xiaomaojames/flannel-io v0.19.2
 ## explicit; go 1.17
-github.com/flannel-io/flannel/backend
-github.com/flannel-io/flannel/backend/alivpc
-github.com/flannel-io/flannel/backend/alloc
-github.com/flannel-io/flannel/backend/awsvpc
-github.com/flannel-io/flannel/backend/extension
-github.com/flannel-io/flannel/backend/gce
-github.com/flannel-io/flannel/backend/hostgw
-github.com/flannel-io/flannel/backend/ipip
-github.com/flannel-io/flannel/backend/ipsec
-github.com/flannel-io/flannel/backend/tencentvpc
-github.com/flannel-io/flannel/backend/udp
-github.com/flannel-io/flannel/backend/vxlan
-github.com/flannel-io/flannel/backend/wireguard
-github.com/flannel-io/flannel/network
-github.com/flannel-io/flannel/pkg/ip
-github.com/flannel-io/flannel/pkg/ipmatch
-github.com/flannel-io/flannel/pkg/mac
-github.com/flannel-io/flannel/pkg/ns
-github.com/flannel-io/flannel/pkg/powershell
-github.com/flannel-io/flannel/pkg/routing
-github.com/flannel-io/flannel/subnet
-github.com/flannel-io/flannel/subnet/etcd
-github.com/flannel-io/flannel/subnet/kube
-github.com/flannel-io/flannel/version
+github.com/xiaomaojames/flannel-io/backend
+github.com/xiaomaojames/flannel-io/backend/alivpc
+github.com/xiaomaojames/flannel-io/backend/alloc
+github.com/xiaomaojames/flannel-io/backend/awsvpc
+github.com/xiaomaojames/flannel-io/backend/extension
+github.com/xiaomaojames/flannel-io/backend/gce
+github.com/xiaomaojames/flannel-io/backend/hostgw
+github.com/xiaomaojames/flannel-io/backend/ipip
+github.com/xiaomaojames/flannel-io/backend/ipsec
+github.com/xiaomaojames/flannel-io/backend/tencentvpc
+github.com/xiaomaojames/flannel-io/backend/udp
+github.com/xiaomaojames/flannel-io/backend/vxlan
+github.com/xiaomaojames/flannel-io/backend/wireguard
+github.com/xiaomaojames/flannel-io/network
+github.com/xiaomaojames/flannel-io/pkg/ip
+github.com/xiaomaojames/flannel-io/pkg/ipmatch
+github.com/xiaomaojames/flannel-io/pkg/mac
+github.com/xiaomaojames/flannel-io/pkg/ns
+github.com/xiaomaojames/flannel-io/pkg/powershell
+github.com/xiaomaojames/flannel-io/pkg/routing
+github.com/xiaomaojames/flannel-io/subnet
+github.com/xiaomaojames/flannel-io/subnet/etcd
+github.com/xiaomaojames/flannel-io/subnet/kube
+github.com/xiaomaojames/flannel-io/version
 # github.com/form3tech-oss/jwt-go v3.2.3+incompatible
 ## explicit
 github.com/form3tech-oss/jwt-go

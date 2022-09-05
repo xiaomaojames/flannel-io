@@ -20,7 +20,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/flannel-io/flannel/pkg/ip"
+	"github.com/xiaomaojames/flannel-io/pkg/ip"
 	"github.com/jonboulle/clockwork"
 	. "github.com/xiaomaojames/flannel-io/subnet"
 	"golang.org/x/net/context"

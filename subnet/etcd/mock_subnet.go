@@ -15,7 +15,7 @@
 package etcd
 
 import (
-	"github.com/flannel-io/flannel/pkg/ip"
+	"github.com/xiaomaojames/flannel-io/pkg/ip"
 	"github.com/xiaomaojames/flannel-io/subnet"
 )
 

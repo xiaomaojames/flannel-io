@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/flannel-io/flannel/pkg/powershell"
+	"github.com/xiaomaojames/flannel-io/pkg/powershell"
 )
 
 // GetInterfaceIP4Addrs returns the IPv4 address for the given network interface

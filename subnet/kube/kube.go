@@ -23,7 +23,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/flannel-io/flannel/pkg/ip"
+	"github.com/xiaomaojames/flannel-io/pkg/ip"
 	"github.com/xiaomaojames/flannel-io/subnet"
 	"golang.org/x/net/context"
 	v1 "k8s.io/api/core/v1"

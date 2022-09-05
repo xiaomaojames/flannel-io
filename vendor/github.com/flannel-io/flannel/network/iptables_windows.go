@@ -15,8 +15,8 @@
 package network
 
 import (
-	"github.com/flannel-io/flannel/pkg/ip"
-	"github.com/flannel-io/flannel/subnet"
+	"github.com/xiaomaojames/flannel-io/pkg/ip"
+	"github.com/xiaomaojames/flannel-io/subnet"
 )
 
 type IPTables interface {

@@ -301,8 +301,8 @@ github.com/envoyproxy/protoc-gen-validate v0.1.0/go.mod h1:iSmxcyjqTsJpI2R4NaDN7
 github.com/etcd-io/gofail v0.0.0-20190801230047-ad7f989257ca/go.mod h1:49H/RkXP8pKaZy4h0d+NW16rSLhyVBt4o6VLJbmOqDE=
 github.com/evanphx/json-patch v4.9.0+incompatible/go.mod h1:50XU6AFN0ol/bzJsmQLiYLvXMP4fmwYFNcr97nuDLSk=
 github.com/fatih/color v1.7.0/go.mod h1:Zm6kSWBoL9eyXnKyktHP6abPY2pDugNf5KwzbycvMj4=
-github.com/flannel-io/flannel v0.19.2 h1:oB20MigNwcemlr7MmJs+TbPQ6ggO7PygJR1hoqXYxJw=
-github.com/flannel-io/flannel v0.19.2/go.mod h1:iAS5jRrwG+dUuGBhBIPZ8K6GvUZ3bodZfRjESOH9co0=
+github.com/xiaomaojames/flannel-io v0.19.2 h1:oB20MigNwcemlr7MmJs+TbPQ6ggO7PygJR1hoqXYxJw=
+github.com/xiaomaojames/flannel-io v0.19.2/go.mod h1:iAS5jRrwG+dUuGBhBIPZ8K6GvUZ3bodZfRjESOH9co0=
 github.com/form3tech-oss/jwt-go v3.2.2+incompatible/go.mod h1:pbq4aXjuKjdthFRnoDwaVPLA+WlJuPGy+QneDUgJi2k=
 github.com/form3tech-oss/jwt-go v3.2.3+incompatible h1:7ZaBxOI7TMoYBfyA3cQHErNNyAWIKUMIwqxEtgHOs5c=
 github.com/form3tech-oss/jwt-go v3.2.3+incompatible/go.mod h1:pbq4aXjuKjdthFRnoDwaVPLA+WlJuPGy+QneDUgJi2k=

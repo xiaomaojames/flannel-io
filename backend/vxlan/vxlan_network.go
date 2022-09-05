@@ -22,8 +22,8 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/flannel-io/flannel/backend"
-	"github.com/flannel-io/flannel/pkg/ip"
+	"github.com/xiaomaojames/flannel-io/backend"
+	"github.com/xiaomaojames/flannel-io/pkg/ip"
 	"github.com/vishvananda/netlink"
 	"github.com/xiaomaojames/flannel-io/subnet"
 	"golang.org/x/net/context"

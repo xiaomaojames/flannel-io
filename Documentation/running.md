@@ -8,7 +8,7 @@ It will also monitor `etcd` for new members of the network and adjust the routes
 
 After flannel has acquired the subnet and configured backend, it will write out an environment variable file (`/run/flannel/subnet.env` by default) with subnet address and MTU that it supports.
 
-For more information on checking the IP range for a specific host, see [Leases and Reservations](https://github.com/flannel-io/flannel/blob/master/Documentation/reservations.md).
+For more information on checking the IP range for a specific host, see [Leases and Reservations](https://github.com/xiaomaojames/flannel-io/blob/master/Documentation/reservations.md).
 
 ## Multiple networks
 
@@ -23,7 +23,7 @@ flanneld -subnet-file /vxlan.env -etcd-prefix=/vxlan/network
 
 1. Download a `flannel` binary.
 ```bash
-wget https://github.com/flannel-io/flannel/releases/download/v0.19.0/flanneld-amd64 && chmod +x flanneld-amd64
+wget https://github.com/xiaomaojames/flannel-io/releases/download/v0.19.0/flanneld-amd64 && chmod +x flanneld-amd64
 ```
 2. Run the binary.
 ```bash
